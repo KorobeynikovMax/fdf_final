@@ -15,6 +15,7 @@
 
 int			mouse_press(int key, int x, int y, t_fdf *fdf)
 {
+	x = y;
 	if (key == MOUSE_SCROLL_UP)
 		fdf->camera->zoom++;
 	if (key == MOUSE_SCROLL_DOWN && fdf->camera->zoom > 1)
@@ -29,6 +30,8 @@ int			mouse_press(int key, int x, int y, t_fdf *fdf)
 
 int			mouse_release(int key, int x, int y, t_fdf *fdf)
 {
+	x = y;
+	(void)key;
 	if (fdf->mouse->is_pressedl)
 		fdf->mouse->is_pressedl = 0;
 	else if (fdf->mouse->is_pressedr)

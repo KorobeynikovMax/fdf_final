@@ -14,6 +14,8 @@
 
 static void	print_usage2(t_fdf *fdf, void *mlx, void *win, int y)
 {
+	char *s;
+
 	mlx_string_put(mlx, win, 15, y += 30, TEXT_COLOR, "Change projection: 'P'");
 	mlx_string_put(mlx, win, 15, y += 30, TEXT_COLOR,
 			"Colorize, if it's not: 'C'");
@@ -21,17 +23,21 @@ static void	print_usage2(t_fdf *fdf, void *mlx, void *win, int y)
 			"----------------------------------------------");
 	mlx_string_put(mlx, win, 15, y += 30, TEXT_COLOR2,
 			"Current Shift_X: ");
-	mlx_string_put(mlx, win, 15, y += 30, TEXT_COLOR2,
-			ft_itoa(fdf->camera->x_shift));
+	s = ft_itoa(fdf->camera->x_shift);
+	mlx_string_put(mlx, win, 15, y += 30, TEXT_COLOR2, s);
+	ft_strdel(&s);
 	mlx_string_put(mlx, win, 15, y += 30, TEXT_COLOR2, "Current Shift_Y: ");
-	mlx_string_put(mlx, win, 15, y += 30, TEXT_COLOR2,
-			ft_itoa(fdf->camera->y_shift));
+	s = ft_itoa(fdf->camera->y_shift);
+	mlx_string_put(mlx, win, 15, y += 30, TEXT_COLOR2, s);
+	ft_strdel(&s);
 	mlx_string_put(mlx, win, 15, y += 30, TEXT_COLOR2, "Current Zoom X: ");
-	mlx_string_put(mlx, win, 15, y += 30, TEXT_COLOR2,
-			ft_itoa(fdf->camera->zoom));
+	s = ft_itoa(fdf->camera->zoom);
+	mlx_string_put(mlx, win, 15, y += 30, TEXT_COLOR2, s);
+	ft_strdel(&s);
 	mlx_string_put(mlx, win, 15, y += 30, TEXT_COLOR2, "Current Z-factor: ");
-	mlx_string_put(mlx, win, 15, y += 30, TEXT_COLOR2,
-			ft_itoa((int)(fdf->camera->z_factor)));
+	s = ft_itoa((int)(fdf->camera->z_factor));
+	mlx_string_put(mlx, win, 15, y += 30, TEXT_COLOR2, s);
+	ft_strdel(&s);
 }
 
 void		print_usage(t_fdf *fdf)

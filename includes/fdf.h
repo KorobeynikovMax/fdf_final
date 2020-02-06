@@ -109,7 +109,7 @@ void				list_put(t_list_z **coordinates, t_list_z *new);
 t_list_z			*list_get(t_list_z **coordinates);
 int					ft_atoihex(char *str);
 void				make_arrays(t_list_z **cordinates, t_map *map);
-void				draw_line(t_point a, t_point b, t_map *map, t_fdf *fdf);
+void				draw_line(t_point a, t_point b, t_fdf *fdf);
 void				draw(t_map *map, t_fdf *fdf);
 void				print_usage(t_fdf *fdf);
 void				init_camera(t_fdf *fdf);

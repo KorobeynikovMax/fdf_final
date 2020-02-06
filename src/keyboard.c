@@ -71,6 +71,7 @@ int			key_press(int key, t_fdf *fdf)
 
 int			x_close(t_fdf *fdf)
 {
+	(void)fdf;
 	fdf_exit("Normal exit.");
 	return (0);
 }

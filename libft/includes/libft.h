@@ -6,7 +6,7 @@
 /*   By: bedavis <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 16:09:46 by bedavis           #+#    #+#             */
-/*   Updated: 2020/01/25 16:30:53 by bedavis          ###   ########.fr       */
+/*   Updated: 2020/02/06 10:49:19 by bedavis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,6 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 void				ft_lstaddend(t_list **alst, t_list *new);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-
-int                 ft_get_next_line(const int fd, char **line);
+int					ft_get_next_line(const int fd, char **line);
 
 #endif

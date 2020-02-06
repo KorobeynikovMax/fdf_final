@@ -44,7 +44,7 @@ static void		put_pixel(int x, int y, int color, t_fdf *fdf)
 ** Bresenham's line algorithm
 */
 
-void			draw_line(t_point a, t_point b, t_map *map, t_fdf *fdf)
+void			draw_line(t_point a, t_point b, t_fdf *fdf)
 {
 	t_point		step;
 	t_point		point;
@@ -87,10 +87,10 @@ void			draw(t_map *map, t_fdf *fdf)
 		{
 			if (x < map->width - 1)
 				draw_line(p3d(make_point(x, y, map), fdf), p3d(make_point(x +
-				1, y, map), fdf), map, fdf);
+				1, y, map), fdf), fdf);
 			if (y < map->height - 1)
 				draw_line(p3d(make_point(x, y, map), fdf), p3d(make_point(x, y
-				+ 1, map), fdf), map, fdf);
+				+ 1, map), fdf), fdf);
 			x++;
 		}
 		y++;
